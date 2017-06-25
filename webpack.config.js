@@ -1,16 +1,16 @@
-var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var CopyWebpackPlugin = require('copy-webpack-plugin')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const DEBUG = !(process.env.NODE_ENV === 'production')
 const VERBOSE = process.argv.includes('--verbose')
 const HOT_DEPLOY = !!process.env.HOT_DEPLOY
-let CONTEXT_PATH = `${(process.env.CONTEXT_PATH || '')}`
+const CONTEXT_PATH = `${(process.env.CONTEXT_PATH || '')}`
 
 const hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true'
 
 function isExternal(module) {
-  var userRequest = module.userRequest
+  const userRequest = module.userRequest
 
   if (typeof userRequest !== 'string') {
     return false
