@@ -1,0 +1,68 @@
+{
+  "name": "ronfaure",
+  "version": "0.0.1",
+  "description": "ronfaure",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cxpqwvtj/ronfaure.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cxpqwvtj/ronfaure/issues"
+  },
+  "homepage": "https://github.com/cxpqwvtj/ronfaure",
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "material-ui": "^0.18.3",
+    "moment": "^2.18.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-redux": "^4.0.8",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^3.7.0",
+    "redux-form": "^6.8.0",
+    "redux-form-material-ui": "^4.2.0",
+    "redux-immutablejs": "^0.0.8",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^0.15.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.0",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "copy-webpack-plugin": "^4.0.1",
+    "ejs": "^2.5.6",
+    "ejs-loader": "^0.3.0",
+    "eslint": "^4.1.0",
+    "eslint-plugin-react": "^7.1.0",
+    "express": "^4.15.3",
+    "html-webpack-plugin": "^2.29.0",
+    "http-proxy-middleware": "^0.17.4",
+    "js-yaml": "^3.8.4",
+    "json-schema-ref-parser": "^3.1.2",
+    "react-dev-utils": "^3.0.0",
+    "react-transform-hmr": "^1.0.4",
+    "redux-devtools": "^3.4.0",
+    "webpack": "^3.0.0",
+    "webpack-dev-middleware": "^1.11.0",
+    "webpack-hot-middleware": "^2.18.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "^1.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=development webpack --progress --colors",
+    "package": "NODE_ENV=production webpack --progress --colors",
+    "start": "NODE_ENV=development HOT_DEPLOY=true USE_PROXY=true node src/main/client-dev-server/server.js",
+    "watch": "NODE_ENV=development webpack --progress --colors --watch",
+    "generate": "node buildSrc/src/main/javascript/swaggerToKotlin.js"
+  }
+}
